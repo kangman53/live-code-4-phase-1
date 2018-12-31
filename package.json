@@ -1,0 +1,28 @@
+{
+  "name": "live-code-week-4",
+  "version": "1.0.0",
+  "description": "# Romawi Battle",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "path": "^0.12.7",
+    "pg": "^7.7.1",
+    "sequelize": "^4.42.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zen-fox-2018/live-code-week-4.git"
+  },
+  "author": "Herman Yulianto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zen-fox-2018/live-code-week-4/issues"
+  },
+  "homepage": "https://github.com/zen-fox-2018/live-code-week-4#readme"
+}

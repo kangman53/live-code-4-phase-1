@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/header.ejs') %>
+</head>
+<body>
+    <%- include('../partials/navbar.ejs') %>
+    <div class="row">
+        <% kingdoms.forEach(kingdom => { %>
+            <div class="card m-5" style="width: 18rem; background-color: 
+                <% if(!kingdom.districtId) { %>
+                    yellow
+                <% } %>
+            ">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= kingdom.kingdomName %></h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Name Of King : <%= kingdom.nameOfKing %></h6>
+                        <a href="/kingdoms/<%= kingdom.id %>" class="card-link">details</a>
+                    </div>
+            </div>
+        <% }) %>
+    </div>
+    <%- include('../partials/script.ejs') %>
+</body>
+</html>

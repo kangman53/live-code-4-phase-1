@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/header.ejs') %>
+</head>
+<body>
+    <%- include('../partials/navbar.ejs') %>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">KingdomName</th>
+            <th scope="col"> 
+                <a href="/soldiers?sort=soldier">
+                    Total Soldier
+                </a>
+            </th>
+            <th scope="col"> 
+                    <a href="/soldiers?sort=attack">
+                        Total Attack
+                    </a>
+                </th>
+              </tr>
+        </thead>
+        <tbody>
+            <% kingdoms.forEach( (kingdom, index) => { %> 
+                <tr>
+                    <th scope="row"><%= index+1 %></th>
+                    <td><%= kingdom.kingdomName %></td>
+                    <td>
+                        <% if(kingdom.totalSoldier) { %>
+                        <%= kingdom.totalSoldier %>
+                        <% } else {%>
+                        0
+                        <% } %>
+                    </td>
+                    <td>
+                            <% if(kingdom.totalAttack) { %>
+                            <%= kingdom.totalAttack %>
+                            <% } else {%>
+                            0
+                            <% } %>
+                        </td>
+                    </tr>
+            <% }) %>
+        </tbody>
+      </table>
+    <%- include('../partials/script.ejs') %>
+</body>
+</html>
